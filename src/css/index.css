@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Shared styles for navbar links */
+.nav-link {
+    @apply text-black focus:text-customBlue focus:border-b-2 pb-1 focus:border-customBlue focus:font-bold;
+}
+.blue-solid-button{
+    @apply bg-customBlue text-white px-4 py-1 rounded;
+}
+.blue-shallow-button{
+    @apply bg-white text-black px-4 py-1 rounded border-2 border-customBlue;
+}
+/* index.css */
+h1 {
+    @apply font-bold text-3xl; /* Tailwind styles for h1 */
+  }
+  
+  h2 {
+    @apply font-semibold text-2xl; /* Tailwind styles for h2 */
+  }
+  
+  h3 {
+    @apply font-medium text-xl; /* Tailwind styles for h3 */
+  }
+.range-slider{
+  @apply  absolute bg-transparent pointer-events-none appearance-none;
+}
+.range-slider::-webkit-slider-thumb {
+  @apply w-4 h-4 cursor-pointer pointer-events-auto border-none bg-blue-300;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 50%;
+}
+.range-slider::-moz-range-thumb {
+  @apply w-6 h-6 cursor-pointer pointer-events-auto border-none bg-customBlue;
+}
+
+
+  /* Hide the scrollbar by default and show it on hover */
+.scrollbar-custom {
+  overflow-y: hidden;
+  transition: overflow-y 0.3s ease-in-out;
+}
+
+.scrollbar-custom:hover {
+  overflow-y: auto;
+} 
+  /* You can add more styles for other elements here */
+  html,body{
+    height: 100%;
+  }

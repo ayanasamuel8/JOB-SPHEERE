@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two-Ended Range Slider</title>
+    <style>
+        .slider-container {
+            position: relative;
+            width: 300px;
+        }
+
+        .range-slider {
+            position: absolute;
+            width: 100%;
+            height: 5px;
+            background: #ddd;
+            border-radius: 5px;
+        }
+
+        .thumb {
+            position: absolute;
+            height: 5px;
+            background: #007bff;
+            border-radius: 5px;
+        }
+
+        input[type="range"] {
+            position: absolute;
+            width: 100%;
+            pointer-events: none;
+            -webkit-appearance: none;
+            background: none;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 16px;
+            height: 16px;
+            background: #007bff;
+            border-radius: 50%;
+            pointer-events: auto;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slider-container">
+        <div class="range-slider"></div>
+        <div class="thumb" id="range-highlight"></div>
+        <input type="range" id="minRange" min="0" max="100" value="20">
+        <input type="range" id="maxRange" min="0" max="100" value="80">
+    </div>
+
+    <p>Selected Range: <span id="rangeValue">20 - 80</span></p>
+
+    <script>
+        const minRange = document.getElementById("minRange");
+        const maxRange = document.getElementById("maxRange");
+        const rangeValue = document.getElementById("rangeValue");
+        const highlight = document.getElementById("range-highlight");
+
+        function updateRange() {
+            let minValue = parseInt(minRange.value);
+            let maxValue = parseInt(maxRange.value);
+
+            if (minValue >= maxValue) {
+                minRange.value = maxValue - 1;
+                minValue = maxValue - 1;
+            }
+
+            const percentMin = (minValue / minRange.max) * 100;
+            const percentMax = (maxValue / maxRange.max) * 100;
+
+            highlight.style.left = percentMin + "%";
+            highlight.style.width = (percentMax - percentMin) + "%";
+            rangeValue.textContent = `${minValue} - ${maxValue}`;
+        }
+
+        minRange.addEventListener("input", updateRange);
+        maxRange.addEventListener("input", updateRange);
+
+        updateRange(); // Initialize on load
+    </script>
+
+</body>
+</html>
