@@ -13,5 +13,7 @@ import facebook_logo from './assets/communication.png'
 import email from './assets/email.png'
 import padlock from './assets/padlock.png'
 import job_sphere from './assets/image.png'
+import work_person from './assets/work_person.svg'
+import pic from './assets/pic.svg'
 
-export { search, pin, back,share,save,profile,email, amazon,cancel, apple_logo, google_logo,linkedin_logo,facebook_logo, padlock, job_sphere };
+export { search, pin, back,share,save,profile,email, amazon,cancel, apple_logo, google_logo,linkedin_logo,facebook_logo, padlock, job_sphere, work_person,pic };

@@ -2,6 +2,7 @@ import INPUT from "./input_form"
 import {apple_logo,google_logo,linkedin_logo,facebook_logo,job_sphere} from './assets'
 import { email, profile,padlock } from "./assets"
 import Logos from "./logos"
+import { Link } from "react-router-dom"
 export default function Authentication({action, headline, elements}){
     return(
         <>
@@ -48,12 +49,12 @@ export default function Authentication({action, headline, elements}){
                                 {action == 'Signup' ? (
                                     <>
                                         <span> <strong>Aready have an account?</strong> </span>
-                                        <span><strong className="text-customBlue">Login</strong></span>
+                                        <span><strong className="text-customBlue"> <Link to={'/login'}>Login</Link></strong></span>
                                     </>
                                 ):
                                 <>
                                     <span> <strong>Didn't have an account?</strong> </span>
-                                    <span><strong className="text-customBlue">Signup</strong></span>
+                                    <span><strong className="text-customBlue"> <Link to={'/signup'}>Signup</Link></strong></span>
                                 </>
                                 }
                             </div>

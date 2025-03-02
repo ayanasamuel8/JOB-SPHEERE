@@ -8,13 +8,17 @@ import JobDetail from './jobDetail.jsx';
 import RelatedJobs from './RelatedJobs.jsx';
 import Announcement from './announcements.jsx';
 import Filter from './filter.jsx';
+import App from './App.jsx';
 import Authentication from './authorization.jsx';
+import { BrowserRouter } from 'react-router-dom';
+import Login from './login.jsx';
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    {/* <div className='h-screen'> */}
-      <Announcement/>
-      {/* <Authentication action={'Signup'} headline={'Create your account'}/> */}
-    {/* </div> */}
+      <BrowserRouter>
+        <App/>
+      </BrowserRouter>
+
   </StrictMode>
 );
 
