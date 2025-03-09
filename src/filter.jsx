@@ -3,7 +3,7 @@ import DoubleRange from "./double_range"
 export default function Filter(){
     return(
         <>
-            <div className="flex justify-center">
+            <div className="flex justify-center h-fit">
                 <div className="inline-flex shadow-md m-5 p-5">
                     <div className="flex flex-col gap-5 justify-center">
                         <h2>Filter</h2>

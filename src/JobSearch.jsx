@@ -5,7 +5,7 @@ export default function JobSearch({logo, title,company, type, salary, descriptio
             <div className="inline-flex w-fit border rounded-md shadow-md m-2">
                 <div className="flex flex-col p-4">
                     <div className="flex flex-row">
-                        <img src={logo} alt="profile" className="w-12 h-12 p-2 h-auto rounded-full" />
+                        <img src={logo} alt="profile" className="w-10 h-9 p-2 h-auto rounded-full" />
                         <div className="pr-2">
                             <h3>{title}</h3>
                             <p className="text-xs">{company}</p>

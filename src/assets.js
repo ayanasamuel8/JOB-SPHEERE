@@ -15,5 +15,6 @@ import padlock from './assets/padlock.png'
 import job_sphere from './assets/image.png'
 import work_person from './assets/work_person.svg'
 import pic from './assets/pic.svg'
+import work from './assets/work.svg'
 
-export { search, pin, back,share,save,profile,email, amazon,cancel, apple_logo, google_logo,linkedin_logo,facebook_logo, padlock, job_sphere, work_person,pic };
+export { search, pin, back,share,save,profile,email, amazon,cancel, apple_logo, google_logo,linkedin_logo,facebook_logo, padlock, job_sphere, work_person,pic, work };

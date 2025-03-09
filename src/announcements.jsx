@@ -10,7 +10,7 @@ export default function Announcement(){
             const response = await fetch(apiUrl)
             if(!response.ok) throw new Error("faild to fetch")
             const data = await response.json()
-            setJoblist(data.jobs)
+            setJoblist((data.jobs).slice(0,5))
             console.log(data)
           }catch(e){
             console.log(e)

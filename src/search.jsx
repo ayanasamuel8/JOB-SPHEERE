@@ -12,7 +12,7 @@ export default function Search(){
                 />
                 <div className="location-button flex gap-2 border-l-2 pl-2 py-2">
                     <img src={pin} alt="location " className='w-5 h-5' />
-                    <p>Location</p>
+                    <input type="text" placeholder='Location' className='bg-gray-100 focus:outline-none w-fit' />
                     <button className="blue-solid-button">Search</button>
                 </div>
             </div>
